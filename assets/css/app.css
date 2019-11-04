@@ -1,7 +1,14 @@
 /* This file is for your main application css. */
 body {
-  background: #010101;
+  background: green;
+  width: 200px;
+  height: 100px;
   color: rgba(255,255,255, 0.6);
+}
+
+html {
+  width: 200px;
+  height: 100px;
 }
 
 #controller {
@@ -9,29 +16,165 @@ body {
   height: 500px;
 }
 
-#controller .button {
-  width: 20px;
-  height: 20px;
-  border-radius: 9999px;
-  border: 1px solid #FFF;
-}
-
-#controller .trigger {
-  width: 20px;
-  height: 20px;
-  border: 1px solid #FFF;
-}
-
-#controller .sub-button{
-  width: 10px;
-  height: 10px;
-  border-radius: 9999px;
-  border: 1px solid #FFF;
-}
-
 #controller div.enabled {
   background-color: white;
 }
 
-#controller #y {
+/* ------- */
+/* Buttons */
+/* ------- */
+
+#controller .button {
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;
+  border: 3px solid #FFF;
+}
+
+#buttons {
+  position: absolute;
+  left: 200px;
+  height: 100px;
+  width: 100px;
+  top: 10px;
+}
+
+#buttons #y {
+  position: absolute;
+  top: 23px;
+  left: 0px;
+}
+
+#buttons #b {
+  position: absolute;
+  top: 45px;
+  left: 24px;
+}
+
+#buttons #x {
+  position: absolute;
+  left: 24px;
+}
+
+#buttons #a {
+  position: absolute;
+  top: 23px;
+  left: 48px;
+}
+
+/* -------- */
+/* Triggers */
+/* -------  */
+
+#controller .trigger {
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  border: 3px solid #FFF;
+}
+
+#triggers {
+  position: absolute;
+  left: 104px;
+}
+
+#triggers #l {
+  margin-right: 30px;
+}
+
+#triggers .trigger {
+  display: inline-block;
+}
+
+
+/* ----------- */
+/* Sub Buttons */
+/* ----------- */
+
+#controller .sub-button{
+  width: 15px;
+  height: 15px;
+  border-radius: 9999px;
+  border: 3px solid #FFF;
+  display: inline-block;
+}
+
+#sub-buttons {
+  position: relative;
+  height: 30px;
+  width: 200px;
+  display: inline-block;
+  top: 52px;
+  left: 84px;
+}
+
+/* ------- */
+/* D - Pad */
+/* ------- */
+
+#controller #x-axis > div{
+  width: 20px;
+  height: 20px;
+  border: 3px solid #FFF;
+  display: inline-block;
+}
+
+#d-pad-container {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+}
+
+#d-pad {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+#x-axis {
+  position: relative;
+  font-size: 0;
+  top: 19px;
+  left: 0;
+}
+
+#y-axis {
+  font-size: 0;
+  position: relative;
+  top: -28px;
+  left: 21px;
+}
+
+#x-axis #left {
+  display: inline;
+  margin-right: 16px;
+  border-radius: 2px;
+  border-bottom-right-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+#x-axis #right {
+  display: inline;
+  border-radius: 2px;
+  border-bottom-left-radius: 16px;
+  border-top-left-radius: 16px;
+}
+
+#controller #y-axis > div{
+  width: 20px;
+  height: 20px;
+  border: 3px solid #FFF;
+}
+
+#y-axis #up {
+  margin-bottom: 16px;
+  border-radius: 2px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+#y-axis #down {
+  border-radius: 2px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }

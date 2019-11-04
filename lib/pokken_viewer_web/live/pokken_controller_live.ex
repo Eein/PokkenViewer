@@ -3,24 +3,34 @@ defmodule PokkenViewerWeb.PokkenControllerLive do
 
   def render(assigns) do
     ~L"""
-    <div id='controller'>
-      <div id='y' class="button <%= if @button_0 == 1, do: 'enabled', else: 'disabled' %>"></div>
-      <div id='b' class="button <%= if @button_1 == 1, do: 'enabled', else: 'disabled' %>"></div>
-      <div id='a' class="button <%= if @button_2 == 1, do: 'enabled', else: 'disabled' %>"></div>
-      <div id='x' class="button <%= if @button_3 == 1, do: 'enabled', else: 'disabled' %>"></div>
-      <div id='l' class="trigger <%= if @button_4 == 1, do: 'enabled', else: 'disabled' %>"></div>
-      <div id='r' class="trigger <%= if @button_5 == 1, do: 'enabled', else: 'disabled' %>"></div>
-      <div id='zl' class="sub-button <%= if @button_6 == 1, do: 'enabled', else: 'disabled' %>"></div>
-      <div id='zr' class="sub-button <%= if @button_7 == 1, do: 'enabled', else: 'disabled' %>"></div>
-      <div id='select' class="sub-button <%= if @button_8 == 1, do: 'enabled', else: 'disabled' %>"></div>
-      <div id='start' class="sub-button <%= if @button_9 == 1, do: 'enabled', else: 'disabled' %>"></div>
-      <div id='x-axis'>
-        <div id='a' class="<%= if @axis_4 < 0, do: 'enabled', else: 'disabled' %>">left: <%= @axis_4 < 0 %></div>
-        <div id='a' class="<%= if @axis_4 > 0, do: 'enabled', else: 'disabled' %>">right: <%= @axis_4 > 0 %></div>
+      <div id='controller'>
+        <div id='buttons'>
+        <div id='y' class="button <%= if @button_0 == 1, do: 'enabled', else: 'disabled' %>"></div>
+        <div id='b' class="button <%= if @button_1 == 1, do: 'enabled', else: 'disabled' %>"></div>
+        <div id='a' class="button <%= if @button_2 == 1, do: 'enabled', else: 'disabled' %>"></div>
+        <div id='x' class="button <%= if @button_3 == 1, do: 'enabled', else: 'disabled' %>"></div>
       </div>
-      <div id='y-axis'>
-        <div id='a' class="<%= if @axis_5 < 0, do: 'enabled', else: 'disabled' %>">up: <%= @axis_5 < 0 %></div>
-        <div id='a' class="<%= if @axis_5 > 0, do: 'enabled', else: 'disabled' %>">down: <%= @axis_5 > 0 %></div>
+      <div id='triggers'>
+        <div id='l' class="trigger <%= if @button_4 == 1, do: 'enabled', else: 'disabled' %>"></div>
+        <div id='r' class="trigger <%= if @button_5 == 1, do: 'enabled', else: 'disabled' %>"></div>
+      </div>
+      <div id='sub-buttons'>
+        <div id='select' class="sub-button <%= if @button_8 == 1, do: 'enabled', else: 'disabled' %>"></div>
+        <div id='start' class="sub-button <%= if @button_9 == 1, do: 'enabled', else: 'disabled' %>"></div>
+        <div id='zl' class="sub-button <%= if @button_6 == 1, do: 'enabled', else: 'disabled' %>"></div>
+        <div id='zr' class="sub-button <%= if @button_7 == 1, do: 'enabled', else: 'disabled' %>"></div>
+      </div>
+      <div id='d-pad-container'>
+        <div id='d-pad'>
+          <div id='x-axis'>
+            <div id='left' class="<%= if @axis_4 < 0, do: 'enabled', else: 'disabled' %>"></div>
+            <div id='right' class="<%= if @axis_4 > 0, do: 'enabled', else: 'disabled' %>"></div>
+          </div>
+          <div id='y-axis'>
+            <div id='up' class="<%= if @axis_5 < 0, do: 'enabled', else: 'disabled' %>"></div>
+            <div id='down' class="<%= if @axis_5 > 0, do: 'enabled', else: 'disabled' %>"></div>
+          </div>
+        </div>
       </div>
     </div>
     """
