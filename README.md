@@ -1,5 +1,9 @@
 # PokkenViewer
 
+A controller viewer for the pokken controller on linux using Phoenix LiveView
+
+![PokkenViewer](https://github.com/Eein/PokkenViewer/blob/master/preview.png)
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
